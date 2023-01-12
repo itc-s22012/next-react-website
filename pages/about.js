@@ -3,6 +3,8 @@ import Hero from 'components/hero'
 import PostBody from 'components/post-body'
 import Contact from 'components/contact'
 import {TwoColumn, TwoColumnMain, TwoColumnSidebar } from 'components/two-column'
+import Image from 'next/legacy/image'
+import eyecatch from 'images/about.jpg'
 export default function About() {
   return ( 
   <Container>
@@ -10,6 +12,16 @@ export default function About() {
       title="About"
       subtitle="About development activities"
     />
+    <figure>
+      <Image 
+      src={eyecatch}
+      alt=""
+      responsive
+      sizes="(min-width: 1152px) 1152px, 100vw"
+      priority
+      placeholder="blur"
+      />
+    </figure>
     <TwoColumn>
     <TwoColumnMain>
     <PostBody>
