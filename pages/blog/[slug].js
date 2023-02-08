@@ -101,7 +101,7 @@ export async function getStaticProps (context) {
       categories: post.categories,
       description: description,
       prevPost: prevPost,
-      nextPost: nextPost,
+      nextPost: nextPost
     }
   }
 }
