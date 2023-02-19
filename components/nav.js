@@ -12,7 +12,20 @@ export default function Nav() {
   }
   return (
     <nav className={navIsOpen ? styles.open : styles.close}>
+      {navIsOpen && (
+        <style jsx global>{`
+            @media (max-width: 767px) {
+              body{
+                overflow: hidden;
+                position: fixed;
+                width: 100%;
+                }
+              }
+          `}</style>
+      )}
     <button className={styles.btn} onClick={toggleNav}>MENU</button>
+      <span className={styles.bar}></span>
+      <span className="sr-only">MENU</span>
       <ul className={styles.list}>
           <Link legacyBehavior href="/"> 
             <a onClick={closeNav}>Home</a>
